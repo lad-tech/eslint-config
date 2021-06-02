@@ -12,7 +12,7 @@ yarn add -D eslint prettier @npm/eslint-config
 ```
 
 ## Использование
-- Создаём 2 файла `.eslintignore` и `eslintrc.js`
+- Создаём 2 файла `.eslintignore` и `.eslintrc.js`
 
 - В `.eslintignore` добавляются все файлы которые не нужно форматировать
 
