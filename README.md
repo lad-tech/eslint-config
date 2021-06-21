@@ -6,9 +6,9 @@
 
 - Проделываем манипуляции по инструкции из нашего [registry](https://glab.lad24.ru/npm/registry)
   
-- Скачиваем конфиг + eslint + prettier 
+- Скачиваем конфиг + eslint + prettier + jest
 ```bahs
-yarn add -D eslint prettier @npm/eslint-config
+yarn add -D eslint prettier jest @npm/eslint-config
 ```
 
 ## Использование
