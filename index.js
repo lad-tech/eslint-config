@@ -58,7 +58,6 @@ module.exports = {
             }
           ],
           "@typescript-eslint/no-empty-interface": 0,
-          "global-require": "off",
           "import/no-unresolved": [
             2,
             {
