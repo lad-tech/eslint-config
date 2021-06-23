@@ -16,9 +16,10 @@
     "@npm:registry": "https://glab.lad24.ru/api/v4/projects/609/packages/npm/"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
     "@typescript-eslint/parser": "^4.22.1",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
