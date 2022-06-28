@@ -33,14 +33,6 @@ module.exports = {
             "error",
             "unix"
         ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ],
         "prettier/prettier": ["error", {"singleQuote": true}],
         "react/prop-types": "off",
         "react/display-name": "off",

@@ -24,5 +24,10 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.1",
     "prettier-eslint": "^15.0.1"
+  },
+  "resolutions": {
+    "minimist": "1.2.6",
+    "ansi-regex": "3.0.1",
+    "path-parse": "1.0.7"
   }
 }
