@@ -1,20 +1,20 @@
 {
-  "name": "@npm/eslint-config",
+  "name": "@lad-tech/eslint-config",
   "version": "0.0.5",
   "description": "ESLint config for React",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\""
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "https://glab.lad24.ru/unoto/eslint-config.git"
+    "url": "https://github.com/lad-tech/eslint-config"
   },
   "author": "Bibazavr <LebedevKi@lad4.ru>",
   "license": "MIT",
-  "publishConfig": {
-    "@npm:registry": "https://glab.lad24.ru/api/v4/projects/609/packages/npm/"
-  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",

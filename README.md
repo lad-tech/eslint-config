@@ -1,22 +1,19 @@
-## Для чего этот пакет:
+## What is this package for?:
 
-Для унификации конфигурации ESLint и использования его во всех смежных проектах
+To unify the design of ESLint and use it in all related projects
 
-## Установка:
+## Installation:
 
-- Проделываем манипуляции по инструкции из нашего [registry](https://glab.lad24.ru/npm/registry)
-  
-- Скачиваем конфиг + eslint + prettier + jest
 ```bahs
 yarn add -D eslint prettier jest @npm/eslint-config
 ```
 
-## Использование
-- Создаём 2 файла `.eslintignore` и `.eslintrc.js`
+## Usage
+- Create 2 files `.eslintignore` and `.eslintrc.js`
 
-- В `.eslintignore` добавляются все файлы которые не нужно форматировать
+- All files that do not need to be formatted are added to `.eslintignore`
 
-Обычно состоит из таких файлов/директорий:
+It usually consists of the following files/directories:
 ```
 .idea
 ios
@@ -27,7 +24,7 @@ assets
 *.config.js
 ```
 
-- В `eslintrc.js` добавляем:
+- Add to `eslintrc.js`:
 
 ```js
 module.exports = {
