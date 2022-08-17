@@ -5,7 +5,7 @@ To unify the design of ESLint and use it in all related projects
 ## Installation:
 
 ```bahs
-yarn add -D eslint prettier jest @npm/eslint-config
+yarn add -D eslint prettier jest @lad-tech/eslint-config
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ assets
 ```js
 module.exports = {
   extends: [
-    '@npm/eslint-config',
+    '@lad-tech/eslint-config',
   ],
 };
 ```
