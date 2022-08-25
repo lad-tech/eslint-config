@@ -1,6 +1,6 @@
 {
   "name": "@lad-tech/eslint-config",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "ESLint config for React",
   "main": "index.js",
   "scripts": {
@@ -29,5 +29,11 @@
     "minimist": "1.2.6",
     "ansi-regex": "3.0.1",
     "path-parse": "1.0.7"
-  }
+  },
+  "keywords": [
+    "lad",
+    "@lad-tech",
+    "eslint",
+    "config"
+  ]
 }
