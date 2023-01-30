@@ -1,6 +1,6 @@
 {
   "name": "@lad-tech/eslint-config",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "ESLint config for React",
   "main": "index.js",
   "scripts": {
