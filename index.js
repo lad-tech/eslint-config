@@ -74,21 +74,9 @@ module.exports = {
     "import/prefer-default-export": 1
   },
   "settings": {
-    "import/ignore": [
-      "node_modules"
-    ],
-    "import/parsers": {
-      "@typescript-eslint/parser": [
-        ".ts",
-        ".tsx"
-      ]
+    'import/resolver': {
+      typescript: {},
     },
-    "import/extensions": [
-      ".js",
-      ".jsx",
-      ".ts",
-      ".tsx"
-    ]
   },
   "ignorePatterns": [
     "node_modules",
