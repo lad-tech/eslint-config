@@ -1,6 +1,6 @@
 {
   "name": "@lad-tech/eslint-config",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "ESLint config for React",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,7 @@
     "eslint-plugin-jest": "^27.2.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "prettier-eslint": "^15.0.1"
   },
   "resolutions": {
