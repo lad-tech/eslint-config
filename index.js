@@ -74,6 +74,9 @@ module.exports = {
     "import/prefer-default-export": 1
   },
   "settings": {
+    "import/ignore": [
+      "node_modules"
+    ],
     'import/resolver': {
       typescript: {},
     },
