@@ -13,7 +13,7 @@
     "type": "git",
     "url": "https://github.com/lad-tech/eslint-config"
   },
-  "author": "Bibazavr <LebedevKi@lad4.ru>",
+  "author": "Bibazavr <LebedevKi@lad24.ru>",
   "license": "MIT",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.2.0",
