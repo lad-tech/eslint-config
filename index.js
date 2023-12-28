@@ -52,6 +52,12 @@ module.exports = {
       }
     ],
     "@typescript-eslint/no-empty-interface": 0,
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+      },
+    ],
     "import/no-unresolved": [
       2,
       {
