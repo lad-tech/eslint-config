@@ -1,98 +1,100 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
     es2024: true,
     node: true,
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:jest/recommended",
-    "plugin:prettier/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
-    "plugin:react-hooks/recommended"
+  parser: '@typescript-eslint/parser',
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jest/recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:sonarjs/recommended',
+    'plugin:prettier/recommended',
   ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+  plugins: ['@typescript-eslint'],
+  settings: {
+    'import/resolver': {
+      typescript: {
+        "alwaysTryTypes": true
+      },
+      node: true
     },
-    "jsxPragma": null // for @typescript/eslint-parser
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx']
+    },
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "jest",
-    "import"
-  ],
-  "rules": {
-    'react/react-in-jsx-scope': 0,
-    'react/jsx-uses-react': 0,
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "prettier/prettier": ["error", {"singleQuote": true}],
-    "react/prop-types": "off",
-    "react/display-name": "off",
-    "@typescript-eslint/no-use-before-define": 0,
-    "@typescript-eslint/naming-convention": [
-      "error",
+  'rules': {
+    'import/order': [
+      'error',
       {
-        "selector": "interface",
-        "format": [
-          "PascalCase"
-        ],
-        "custom": {
-          "regex": "^I[A-Z]",
-          "match": true
-        }
+        'newlines-between': 'always'
       }
     ],
-    "@typescript-eslint/no-empty-interface": 0,
+
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
         argsIgnorePattern: '^_',
       },
     ],
-    "import/no-unresolved": [
-      2,
+
+    // Использование оберток
+    '@typescript-eslint/no-restricted-imports': [
+      'error',
       {
-        "commonjs": true,
-        "amd": true
-      }
+        paths: [
+          {
+            name: 'lodash',
+            message: 'Import [module] from lodash/[module] instead.',
+          },
+          {
+            name: 'react-redux',
+            importNames: ['useSelector', 'useDispatch'],
+            message: 'Use typed hooks `useAppDispatch` and `useAppSelector` instead.',
+          },
+          {
+            name: 'dayjs',
+            message: 'Use import from "@shared/lib/dayjs" instead',
+          },
+        ],
+
+        patterns: [
+          {
+            group: ['antd', '!@refinedev/antd', '@ant-design', 'rc-*', '@lad-tech/mobydick-*', '@lad-tech/keyboard-aware'],
+            message: 'Use import from "@shared/ui" instead',
+          },
+        ],
+      },
     ],
-    "import/named": 2,
-    "import/namespace": 2,
-    "import/default": 2,
-    "import/export": 2,
-    "import/first": 2,
-    "import/no-absolute-path": 2,
-    "import/order": [
-      "error",
+
+    // При использовании `@ts-<directive>` нужно добавлять описание
+    '@typescript-eslint/ban-ts-comment': [
+      'error',
       {
-        "newlines-between": "always"
-      }
+        'ts-expect-error': 'allow-with-description',
+        'ts-ignore': 'allow-with-description',
+        'ts-nocheck': true,
+        'ts-check': false,
+        'minimumDescriptionLength': 5,
+      },
     ],
-    "import/prefer-default-export": 1
-  },
-  "settings": {
-    "import/ignore": [
-      "node_modules"
-    ],
-    'import/resolver': {
-      typescript: {},
-    },
-  },
-  "ignorePatterns": [
-    "node_modules",
-    ".babelrc",
-    "babel.config.js",
-    "metro.config.js",
-    "jest.config.js"
-  ]
-}
+
+    // Отключаем Prop Types
+    'react/prop-types': 'off',
+    'react/require-default-props': 'off',
+    'react/no-unused-prop-types': 'off',
+
+    // Отключаем обязательный импорт React
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-filename-extension': ['error', { extensions: ['.ts', '.tsx'] }],
+
+    // Предотвращение использования небезопасных `target="_blank"`
+    'react/jsx-no-target-blank': 'warn',
+  }
+};
