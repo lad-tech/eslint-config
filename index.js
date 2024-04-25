@@ -103,6 +103,11 @@ module.exports = {
     // Предотвращение использования небезопасных `target="_blank"`
     'react/jsx-no-target-blank': 'warn',
 
-    'sonarjs/no-duplicate-string': ['error', { ignoreStrings: 'lower-case,text/plain,Content-Type' }],
+    rules: {
+      'sonarjs/no-duplicate-string': [
+        'error',
+        {ignoreStrings: 'lower-case,text/plain,Content-Type,space-between'},
+      ],
+    },
   }
 };
