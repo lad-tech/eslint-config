@@ -28,6 +28,11 @@ module.exports = {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx']
     },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
   },
   'rules': {
     'import/order': [
