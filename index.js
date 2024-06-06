@@ -103,16 +103,14 @@ module.exports = {
 
     // Отключаем обязательный импорт React
     'react/react-in-jsx-scope': 'off',
-    'react/jsx-filename-extension': ['error', { extensions: ['.ts', '.tsx'] }],
+    'react/jsx-filename-extension': ['error', {extensions: ['.ts', '.tsx']}],
 
     // Предотвращение использования небезопасных `target="_blank"`
     'react/jsx-no-target-blank': 'warn',
 
-    rules: {
-      'sonarjs/no-duplicate-string': [
-        'error',
-        {ignoreStrings: 'lower-case,text/plain,Content-Type,space-between'},
-      ],
-    },
+    'sonarjs/no-duplicate-string': [
+      'error',
+      {ignoreStrings: 'lower-case,text/plain,Content-Type,space-between'},
+    ],
   }
 };
