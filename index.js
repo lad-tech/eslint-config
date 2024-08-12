@@ -110,7 +110,7 @@ module.exports = {
 
     'sonarjs/no-duplicate-string': [
       'error',
-      {ignoreStrings: 'lower-case,text/plain,Content-Type,space-between'},
+      {ignoreStrings: 'lower-case,text/plain,Content-Type,space-between,flex-start,flex-end'},
     ],
   }
 };
